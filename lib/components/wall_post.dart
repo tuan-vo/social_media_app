@@ -74,6 +74,7 @@ class _WallPostState extends State<WallPost> {
               ),
               const SizedBox(height: 5),
               Text(
+                
                 widget.likes.length.toString(),
                 style: const TextStyle(color: Colors.grey),
               ),
