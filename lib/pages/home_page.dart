@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:social_media_app/components/drawer.dart';
 import 'package:social_media_app/components/text_field.dart';
 import 'package:social_media_app/components/wall_post.dart';
+import 'package:social_media_app/helper/helper_methods.dart';
 import 'package:social_media_app/pages/profile_page.dart';
 
 class HomePage extends StatefulWidget {
@@ -92,6 +93,7 @@ class _HomePageState extends State<HomePage> {
                         return WallPost(
                           message: post['Message'],
                           user: post['UserEmail'],
+                          time: formatDate(post['TimeStamp']),
                           postId: post.id,
                           likes: List<String>.from(post['Likes'] ?? []),
                         );
