@@ -17,7 +17,8 @@ class WallPost extends StatefulWidget {
     required this.message,
     required this.user,
     required this.postId,
-    required this.likes, required this.time,
+    required this.likes,
+    required this.time,
   });
 
   @override
@@ -118,7 +119,7 @@ class _WallPostState extends State<WallPost> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.grey[200],
+        color: Theme.of(context).colorScheme.primary,
         borderRadius: BorderRadius.circular(8),
       ),
       margin: const EdgeInsets.only(top: 25, left: 25, right: 25),
@@ -136,21 +137,21 @@ class _WallPostState extends State<WallPost> {
 
               // user
               Row(
-            children: [
-              Text(
-                widget.user,
-                style: TextStyle(color: Colors.grey[400]),
-              ),
-              Text(
-                ' - ',
-                style: TextStyle(color: Colors.grey[400]),
-              ),
-              Text(
-                widget.time,
-                style: TextStyle(color: Colors.grey[400]),
-              ),
-            ],
-          )
+                children: [
+                  Text(
+                    widget.user,
+                    style: TextStyle(color: Colors.grey[400]),
+                  ),
+                  Text(
+                    ' - ',
+                    style: TextStyle(color: Colors.grey[400]),
+                  ),
+                  Text(
+                    widget.time,
+                    style: TextStyle(color: Colors.grey[400]),
+                  ),
+                ],
+              )
             ],
           ),
           const SizedBox(height: 20),

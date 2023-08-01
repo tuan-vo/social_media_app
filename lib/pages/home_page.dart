@@ -48,20 +48,20 @@ class _HomePageState extends State<HomePage> {
     Navigator.pop(context);
     // go to profile page
     Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => ProfilePage(),
-        ));
+      context,
+      MaterialPageRoute(
+        builder: (context) => ProfilePage(),
+      ),
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
+      backgroundColor: Theme.of(context).colorScheme.background,
       appBar: AppBar(
         centerTitle: true,
         title: const Text("The Wall"),
-        backgroundColor: Colors.grey[900],
         // actions: [
         //   IconButton(
         //     onPressed: signOut,
